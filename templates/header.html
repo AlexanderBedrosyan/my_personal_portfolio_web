@@ -1,0 +1,33 @@
+
+<link rel="stylesheet" href="/static/style/header.css">
+<header class="navbar" style="background-color: black">
+        <nav>
+            <ul>
+                <li class="li1">
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="li2">
+                    <a href="{% url 'certificates' %}">Certificates</a>
+                </li>
+                <li class="li3">
+                    <a href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="li4">
+                    <a href="{% url 'contacts' %}">Contacts</a>
+                </li>
+                <li class="li5">
+                    <a href="/static/images/resume.pdf" download="resume.pdf">Resume</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">More</a>
+                    <ul class="dropdown-content">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'certificates' %}">Certificates</a></li>
+                        <li><a href="{% url 'projects' %}">Projects</a></li>
+                        <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                        <li><a href="/static/images/resume.pdf" download="resume.pdf">Resume</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>

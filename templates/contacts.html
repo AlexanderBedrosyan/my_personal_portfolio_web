@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style/contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Contacts</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="card">
+      <div class="card-header">
+        <h2>My contacts:</h2>
+      </div>
+      <ul class="list-group list-group-flush">
+         <li class="list-group-item">
+            <button type="button" onclick="location.href='https://github.com/AlexanderBedrosyan'">
+                <i class="fa-brands fa-github"></i>
+            </button>
+            My GitHub Profile
+        </li>
+        <li class="list-group-item">
+            <button type="button" onclick="location.href='https://www.linkedin.com/in/alexander-bedrosyan-02380aa7/'">
+                <i class="fa-brands fa-linkedin-in fa-xl"></i>
+            </button>
+            My LinkedIn Profile
+        </li>
+        <li class="list-group-item">
+            <button type="button" onclick="location.href='https://www.youtube.com/channel/UCMfx0el0zdoYf2r9MXwiBhg'">
+                <i class="fa-brands fa-youtube"></i>
+            </button>
+            My Youtube Channel
+        </li>
+        <li class="list-group-item">
+            <button type="button" onclick="location.href='#'">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+            alexander.bedrosyan@gmail.com
+        </li>
+
+        <li class="list-group-item">
+            <button type="button" onclick="location.href='#'">
+                <i class="fa-solid fa-phone"></i>
+            </button>
+            +359 895 70 75 58
+        </li>
+      </ul>
+    </div>
+
+</body>
+</html>
