@@ -26,13 +26,12 @@ SECRET_KEY = 'django-insecure-*#qymsc7-o$h_mcp3^va3fxs5f(4ae0s$zse+)s_-0p+vjz#im
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["alexander1926.pythonanywhere.com",]
+ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +43,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,16 +78,15 @@ WSGI_APPLICATION = 'portfolio_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'alexander1926$default',
-        'USER': 'alexander1926',
-        'PASSWORD': 'bLaBla@12345',
-        'HOST': 'alexander1926.mysql.pythonanywhere-services.com',
-    },
-    'OPTIONS': {
-            "init_command": "SET sql_mode='STRICT_TRANS_TABLES';",
-    },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'my_site_database',
+        'USER': 'postgres-user',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -125,8 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'staticfiles/'
+]
+
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
